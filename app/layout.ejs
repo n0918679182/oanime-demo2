@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <!-- boxicon -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">O Anime</a>
+
+    <div class="icons">
+      <i class='bx bx-search' id="search-btn"></i>
+      <div class='bx bxs-user' id="user-btn" >
+        <ul class="user-menu" id="user-menu">
+          <li><a href="#">會員管理</a></li>
+          <li><a href="#">所有動畫</a></li>
+          <li><a href="#">觀看紀錄</a></li>
+          <li><a href="#">我的最愛</a></li>
+          <li><a href="#">問題回報</a></li>
+          <li><a href="#" id="logout">登出</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="search-form">
+      <form action="" method="post">
+        <input type="text" name="videoName">
+        <button type="submit">
+          <i class='bx bx-search' id="search-btn"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <div class="login-container" id="login-container">
+    <form action="" class="login-form">
+      <i class='bx bx-x' id="close-btn"></i>
+      <h2>登入</h2>
+      <input type="text" placeholder="請輸入帳號" class="input"/>
+      <p class="login-errorMessage"></p>
+      <input type="password" placeholder="請輸入密碼" class="input"/>
+      <p class="login-errorMessage"></p>
+      <!-- <input type="submit" value="登入" class="login-btn"> -->
+      <a href="" class="login-btn" id="login-btn">登入</a>
+      <a href="#">忘記密碼？</a>
+      <a href="#">註冊</a>
+    <form>
+  </div>
+
+  <%- contents %>
+
+  <footer class="footer">
+    <ul>
+      <li>
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-twitter' ></i>
+        <i class='bx bxl-github' ></i>
+        <i class='bx bxl-youtube' ></i>
+      </li>
+      <li>
+        <p> &copy; Copyright @ 2022 by O Anime | All Rights Reserved</p>
+      </li>
+      <li>
+        <p>此作品為前端作品 並無作為商業利益所用</p>
+      </li>
+    </ul>
+  </footer>
+
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
