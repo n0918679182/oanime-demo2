@@ -31,6 +31,7 @@ login.addEventListener('click', function () {
 });
 logout.addEventListener('click', function () {
   havelogin = "false";
+  userMenu.classList.remove('active');
 });
 loginClose.addEventListener('click', function () {
   document.getElementById("login-container").style.top = "-120%";

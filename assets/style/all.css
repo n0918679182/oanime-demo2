@@ -119,7 +119,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1000; }
+  z-index: 1000;
+  position: relative; }
   .header .logo {
     background: var(--main-color);
     -webkit-background-clip: text;
@@ -139,42 +140,40 @@ p {
       color: transparent; }
   .header .icons #search-btn {
     margin-right: 40px; }
-  .header .icons #user-btn {
-    position: relative; }
-    .header .icons #user-btn .user-menu {
-      position: absolute;
-      top: 30px;
-      right: 12px;
-      min-width: 97px;
-      background: #bc2b50;
-      text-align: center;
-      display: block;
-      border-radius: 10px 0 10px 10px;
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-              clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-      -webkit-transition: .3s;
-      -o-transition: .3s;
-      transition: .3s;
-      z-index: 1000; }
-      .header .icons #user-btn .user-menu.active {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
-      .header .icons #user-btn .user-menu li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.427); }
-        .header .icons #user-btn .user-menu li:last-child {
-          border-bottom: none; }
-        .header .icons #user-btn .user-menu li:hover {
-          background: rgba(0, 0, 0, 0.3); }
-        .header .icons #user-btn .user-menu li a {
-          line-height: 30px;
-          font-size: 16px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          width: 100%;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
+  .header .user-menu {
+    position: absolute;
+    top: 55px;
+    right: 9%;
+    min-width: 97px;
+    background: #bc2b50;
+    text-align: center;
+    display: block;
+    border-radius: 10px 0 10px 10px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    z-index: 1000; }
+    .header .user-menu.active {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+    .header .user-menu li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.427); }
+      .header .user-menu li:last-child {
+        border-bottom: none; }
+      .header .user-menu li:hover {
+        background: rgba(0, 0, 0, 0.3); }
+      .header .user-menu li a {
+        line-height: 30px;
+        font-size: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
   .header .search-form {
     position: absolute;
     top: 100%;
@@ -258,7 +257,7 @@ p {
       line-height: 38.4px;
       margin-bottom: 17px; }
     .login-container .login-form .input {
-      width: 414px;
+      width: 398px;
       height: 37px;
       margin: 0 96px;
       font-size: 16px;
@@ -289,7 +288,7 @@ p {
       width: 414px;
       padding-left: 14px; }
     .login-container .login-form .login-btn {
-      width: 428px;
+      width: 414px;
       text-align: center;
       background: var(--main-color);
       border: none;
@@ -647,5 +646,107 @@ p {
               transform: scale(2); }
 
 /* footer */
+@media (max-width: 576px) {
+  .header .user-menu {
+    left: 0;
+    top: 64.48px;
+    width: 100%;
+    border-radius: 0;
+    background: -o-linear-gradient(315deg, rgba(188, 43, 80, 0.8) 30%, rgba(130, 84, 235, 0.8));
+    background: linear-gradient(135deg, rgba(188, 43, 80, 0.8) 30%, rgba(130, 84, 235, 0.8));
+    text-align: left; }
+    .header .user-menu li {
+      padding: 2px 0;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.427); }
+      .header .user-menu li a {
+        padding-left: 20px;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+  .login-container .login-form .input {
+    width: 284px;
+    margin: 0 25px; }
+  .login-container .login-form .login-errorMessage {
+    width: 300px; }
+  .login-container .login-form .login-btn {
+    width: 300px; }
+  .banner {
+    background-size: 200%;
+    background-position: 60% 40%; }
+    .banner .liner-bg {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .banner .liner-bg .content {
+        margin-right: 0; }
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .intro .image {
+      width: 400px;
+      height: 240px;
+      margin-left: 0px; }
+    .intro .content {
+      margin-top: 0;
+      margin-bottom: 54px; }
+  .platform .pic {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -20px 0 0 -20px; }
+    .platform .pic li {
+      width: 200px;
+      height: 200px;
+      margin: 20px 0 0 20px; }
+      .platform .pic li .text {
+        width: 200px;
+        height: 200px;
+        padding: 0 5px; }
+  .subscribe ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .subscribe ul li {
+      width: 336px;
+      height: 288px; }
+      .subscribe ul li:nth-child(1) {
+        margin: 0;
+        margin-bottom: 20px; }
+      .subscribe ul li .cover .content {
+        width: 288px; }
+        .subscribe ul li .cover .content h2 {
+          line-height: 43px;
+          font-size: 24px; }
+          .subscribe ul li .cover .content h2 span {
+            font-size: 36px; }
+      .subscribe ul li .cover a {
+        width: 288px;
+        height: 28px; }
+  .footer ul li p {
+    margin: 0 5%; } }
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 70px; }
+  h2 {
+    font-size: 24px; }
+  .banner .liner-bg .content span {
+    font-size: 24px; }
+  .intro .image {
+    width: 240px;
+    height: 160px; }
+    .intro .image .icon i {
+      font-size: 40px; }
+  .intro .content {
+    margin-top: 0;
+    margin-bottom: 40px; } }
 
 /*# sourceMappingURL=all.css.map */
