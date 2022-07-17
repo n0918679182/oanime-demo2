@@ -37,6 +37,7 @@ login.addEventListener('click', function () {
 
 logout.addEventListener('click', function () {
   havelogin = "false";
+  userMenu.classList.remove('active');
 });
 
 loginClose.addEventListener('click', function () {

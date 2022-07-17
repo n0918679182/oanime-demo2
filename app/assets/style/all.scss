@@ -1,6 +1,7 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+
 :root{
   --main-color: linear-gradient(135deg,rgba(188,43,80,1) 30%,rgba(130,84,235,1));
 }
@@ -71,6 +72,7 @@ p{
 	top: 0; left: 0; right: 0;
   align-items: center;
   z-index: 1000;
+  position: relative;
   .logo{
     background: var(--main-color);
     background-clip: text;
@@ -93,43 +95,42 @@ p{
     #search-btn{
       margin-right: 40px;
     }
-    #user-btn{
-      position: relative;
-      .user-menu{
-        position: absolute;
-        top: 30px;
-        right: 12px;
-        min-width: 97px;
-        background: #bc2b50;
-        text-align: center;
-        display: block;
-        border-radius: 10px 0 10px 10px;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        transition: .3s;
-        z-index: 1000;
-        &.active{
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-        li{
-          border-bottom: 1px solid rgba(255, 255, 255, 0.427);
-          &:last-child{
-            border-bottom: none;
-          }
-          &:hover{
-            background: rgba(0, 0, 0, 0.3);
-          }
-          a{
-            line-height: 30px;
-            font-size: 16px;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-          }
-        }
+  }
+
+  .user-menu{
+    position: absolute;
+    top: 55px;
+    right: 9%;
+    min-width: 97px;
+    background: #bc2b50;
+    text-align: center;
+    display: block;
+    border-radius: 10px 0 10px 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: .3s;
+    z-index: 1000;
+    &.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    li{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.427);
+      &:last-child{
+        border-bottom: none;
+      }
+      &:hover{
+        background: rgba(0, 0, 0, 0.3);
+      }
+      a{
+        line-height: 30px;
+        font-size: 16px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
       }
     }
   }
+
   .search-form{
     position: absolute;
     top: 100%; left: 0; right: 0;
@@ -201,7 +202,7 @@ p{
       margin-bottom: 17px;
     }
     .input{
-      width: 414px;
+      width: 398px;
       height: 37px;
       margin: 0 96px;
       font-size: 16px;
@@ -223,7 +224,7 @@ p{
       padding-left: 14px;
     }
     .login-btn{
-      width: 428px;
+      width: 414px;
       // height: 37px;
       text-align: center;
       background: var(--main-color);
@@ -563,3 +564,5 @@ p{
   }
 }
 /* footer */
+
+@import '_rwd';
