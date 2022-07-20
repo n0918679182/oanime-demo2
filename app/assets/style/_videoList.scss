@@ -1,0 +1,93 @@
+.video-list{
+    background: linear-gradient(135deg,rgba(188,43,80,.3) 30%,rgba(130,84,235,.3));
+    padding: 80px 0;
+    .tags{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 44px;
+        .close-bt{
+            display: none;
+        }
+        .tag{
+            margin-right: 28px;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                padding: 6px 16px;
+                background: rgba(188, 43, 80, 1);
+                border-radius: 5px;
+            }
+            &.active{
+                a{
+                    background: var(--main-color);
+                }
+            }
+            &:hover{
+                a{
+                    background: var(--main-color);
+                }
+            }
+            
+        }
+    }
+    .tags-rwd{
+        display: none;
+        
+    }
+    .videos{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 44px 24px;
+        width: 1076px;
+        margin: 0 auto;
+        li{
+            width: 196px;
+            background: rgb(246, 183, 199);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+            .image{
+                overflow: hidden;
+                img{
+                    width: 196px;
+                    height: 285px;
+                    object-fit: cover;
+                    transition: .3s;
+                }
+            }
+            .title{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 39px;
+                position: relative;
+                padding: 10px;
+                h3{
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #000;
+                }
+                p{
+                    text-align: center;
+                    width: 60px;
+                    background: var(--main-color);
+                    margin-bottom: 0;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-radius: 5px 0 5px 0;
+                    font-size: 14px;
+                }
+            }
+            &:hover{
+                .image{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
