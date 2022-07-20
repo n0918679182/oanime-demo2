@@ -6,16 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首頁</title>
-  <link rel="stylesheet" href="./assets/style/all.css">
+  
   <!-- boxicon -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <!-- swiper cdn link -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
   <header class="header">
-    <a href="#" class="logo">O Anime</a>
+    <a href="http://localhost:8080" class="logo">O Anime</a>
 
     <div class="icons">
       <i class='bx bx-search' id="search-btn"></i>
@@ -24,7 +28,7 @@
 
     <ul class="user-menu" id="user-menu">
       <li><a href="#">會員管理</a></li>
-      <li><a href="#">所有動畫</a></li>
+      <li><a href="http://localhost:8080/video-list.html">所有動畫</a></li>
       <li><a href="#">觀看紀錄</a></li>
       <li><a href="#">我的最愛</a></li>
       <li><a href="#">問題回報</a></li>
@@ -182,8 +186,11 @@
 
 
 
-
   <script src="./assets/js/vendors.js"></script>
+
+  <!-- swiper js cdn link -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
   <script src="./assets/js/all.js"></script>
 </body>
 
