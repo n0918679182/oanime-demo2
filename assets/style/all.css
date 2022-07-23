@@ -58,7 +58,9 @@ body {
   color: #fff; }
 
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
 
 a {
   text-decoration: none;
@@ -87,7 +89,7 @@ p {
   margin-bottom: 12px; }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 .bt {
@@ -380,52 +382,54 @@ p {
 /* banner section */
 /* intro section */
 .intro {
-  background: var(--main-color);
-  margin: 0 10%;
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 80px; }
-  .intro .image {
-    background: url("../images/intro.jpg") center;
-    background-size: cover;
-    width: 640px;
-    height: 320px;
-    -webkit-transform: translateY(-40px);
-        -ms-transform: translateY(-40px);
-            transform: translateY(-40px);
-    margin-left: 40px;
+  padding: 0 30px; }
+  .intro .container {
+    background: var(--main-color);
     border-radius: 20px;
-    -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4); }
-    .intro .image .icon {
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 80px; }
+    .intro .container .image {
+      background: url("../images/intro.jpg") center;
+      background-size: cover;
+      width: 50%;
+      height: auto;
+      -webkit-transform: translateY(-40px);
+          -ms-transform: translateY(-40px);
+              transform: translateY(-40px);
+      margin-left: 40px;
       border-radius: 20px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .intro .image .icon i {
-        font-size: 80px;
-        -webkit-transition: .2s;
-        -o-transition: .2s;
-        transition: .2s; }
-      .intro .image .icon:hover i {
-        background: var(--main-color);
-        -webkit-background-clip: text;
-                background-clip: text;
-        color: transparent; }
-  .intro .content {
-    margin: 0 auto;
-    margin-top: 80px; }
+      -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+              box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4); }
+      .intro .container .image .icon {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .intro .container .image .icon i {
+          font-size: 80px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s; }
+        .intro .container .image .icon:hover i {
+          background: var(--main-color);
+          -webkit-background-clip: text;
+                  background-clip: text;
+          color: transparent; }
+    .intro .container .content {
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-bottom: 78px; }
 
 /* intro section */
 /* multiple platform section */
@@ -443,7 +447,10 @@ p {
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px; }
     .platform .pic li {
       width: 264px;
       height: 264px;
@@ -455,8 +462,7 @@ p {
       border-radius: 20px;
       -webkit-box-shadow: 0 7px 20px rgba(0, 0, 0, 0.5);
               box-shadow: 0 7px 20px rgba(0, 0, 0, 0.5);
-      overflow: hidden;
-      margin-right: 48px; }
+      overflow: hidden; }
       .platform .pic li .shadow {
         width: 100px;
         height: 100px;
@@ -552,17 +558,19 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    gap: 30px 80px; }
     .subscribe ul li {
       width: 560px;
       height: 480px;
       border-radius: 20px; }
       .subscribe ul li:nth-child(1) {
         background: url(../images/surface-KIDGf43UPOw-unsplash.jpg) 72% 95%;
-        background-size: 210%;
-        margin-right: 80px; }
+        background-size: 210%; }
       .subscribe ul li:nth-child(2) {
         background: url(../images/onur-binay-zEm-VSe2yKY-unsplash.jpg) 38% 88%;
         background-size: 170%; }
@@ -656,13 +664,12 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 44px 24px;
-    width: 1076px;
     margin: 0 auto; }
     .video-list .videos li {
       width: 196px;
@@ -748,7 +755,13 @@ p {
               transform: scale(2); }
 
 /* footer */
+@media (max-width: 992px) {
+  h2 {
+    font-size: 28px; } }
+
 @media (max-width: 768px) {
+  h1 {
+    font-size: 80px; }
   .container {
     width: 100%; }
   .login-container .login-form .input {
@@ -767,7 +780,9 @@ p {
               align-items: center; }
       .banner .liner-bg .content {
         margin-right: 0; }
-  .intro {
+        .banner .liner-bg .content span {
+          font-size: 28px; }
+  .intro .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -775,16 +790,14 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .intro .image {
-      width: 440px;
-      height: 264px;
+    .intro .container .image {
+      width: 80%;
+      height: 30vh;
       margin-left: 0px; }
-    .intro .content {
+    .intro .container .content {
       margin-top: 0;
       margin-bottom: 54px; }
   .platform .pic {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin: -20px 0 0 -20px; }
     .platform .pic li {
       width: 260px;
@@ -794,36 +807,28 @@ p {
         width: 260px;
         height: 260px;
         padding: 0 5px; }
-  .subscribe ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .subscribe ul li {
-      width: 536px;
-      height: 288px; }
-      .subscribe ul li:nth-child(1) {
-        margin: 0;
-        margin-bottom: 40px;
-        background-position: 72% 85%;
-        background-size: 180%; }
-      .subscribe ul li:nth-child(2) {
-        background-position: 0% 58%;
-        background-size: 120%; }
-      .subscribe ul li .cover .content {
-        width: 488px; }
-        .subscribe ul li .cover .content h2 {
-          line-height: 43px;
-          font-size: 24px; }
-          .subscribe ul li .cover .content h2 span {
-            font-size: 36px; }
-      .subscribe ul li .cover a {
-        width: 288px;
-        height: 28px;
-        margin-left: 20px; }
+  .subscribe ul li {
+    width: 80%;
+    height: 288px; }
+    .subscribe ul li:nth-child(1) {
+      margin: 0;
+      margin-bottom: 40px;
+      background-position: 72% 85%;
+      background-size: 180%; }
+    .subscribe ul li:nth-child(2) {
+      background-position: 0% 58%;
+      background-size: 120%; }
+    .subscribe ul li .cover .content {
+      width: 90%; }
+      .subscribe ul li .cover .content h2 {
+        line-height: 43px;
+        font-size: 24px; }
+        .subscribe ul li .cover .content h2 span {
+          font-size: 36px; }
+    .subscribe ul li .cover a {
+      width: 288px;
+      height: 28px;
+      margin-left: 20px; }
   .advertise .box {
     height: 160px; }
   .video-list .cover {
@@ -942,8 +947,6 @@ p {
     border-radius: 5px 0 0 5px;
     -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
             box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
-  .video-list .videos {
-    width: 636px; }
   .footer ul li p {
     margin: 10px 5%; } }
 
@@ -973,28 +976,37 @@ p {
                 justify-content: flex-start; }
   .banner .liner-bg .content span {
     font-size: 24px; }
-  .intro .image {
-    width: 240px;
-    height: 160px; }
-    .intro .image .icon i {
-      font-size: 40px; }
-  .intro .content {
-    margin-top: 0;
-    margin-bottom: 40px; }
-  .subscribe ul li {
-    width: 336px; }
-    .subscribe ul li:nth-child(1) {
-      margin: 0;
-      margin-bottom: 20px;
-      background-position: 72% 95%;
-      background-size: 210%; }
-    .subscribe ul li:nth-child(2) {
-      background-position: 38% 88%;
-      background-size: 170%; }
-    .subscribe ul li .cover .content {
-      width: 288px; }
-    .subscribe ul li a {
-      width: 288px; }
+  .banner .liner-bg .content a {
+    width: 90%; }
+  .intro {
+    padding: 0 15px; }
+    .intro .container .image {
+      height: 20vh; }
+      .intro .container .image .icon i {
+        font-size: 40px; }
+    .intro .container .content {
+      margin-top: 0;
+      margin-bottom: 40px; }
+  .platform .content {
+    width: 90%;
+    margin: 0 auto; }
+  .subscribe ul li:nth-child(1) {
+    margin: 0;
+    margin-bottom: 20px;
+    background-position: 72% 95%;
+    background-size: 210%; }
+  .subscribe ul li:nth-child(2) {
+    background-position: 38% 88%;
+    background-size: 170%; }
+  .subscribe ul li .cover .content {
+    width: 80%; }
+    .subscribe ul li .cover .content h2 {
+      font-size: 18px;
+      letter-spacing: 2px; }
+      .subscribe ul li .cover .content h2 span {
+        font-size: 28px; }
+  .subscribe ul li .cover a {
+    width: 80%; }
   .advertise {
     margin-top: 50px; }
     .advertise .box {
@@ -1025,13 +1037,9 @@ p {
       -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
               box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
     .video-list .videos {
-      gap: 28px 18px;
-      width: 378px; }
+      gap: 28px 18px; }
       .video-list .videos li {
-        width: 180px; }
-        .video-list .videos li .image img {
-          width: 180px;
-          height: 240px; }
+        width: 45%; }
   .footer p {
     font-size: 14px; }
   .footer ul li {
